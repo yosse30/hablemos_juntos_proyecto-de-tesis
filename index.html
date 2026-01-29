@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Aplicación CONTE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+</head>
+<script src="script.js"></script>
+<script type="module" src="principal.js"></script>
+
+<body>
+    <!--Parte superior-->
+    <ul class="nav shadow-sm pt-4 pb-3 titulo d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start">
+        <!--Nombre de la aplicación-->
+        <li class="nav-item">
+            <h1 class="mx-3 app">Hablemos Juntos</h1>
+        </li>
+    </ul>
+
+    <div class="layout">
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <!-- BIENVENIDA -->
+            <!-- BIENVENIDA -->
+            <div id="inicio" class="tabcontent" style="display:block; text-align:center; padding:40px;">
+
+                <img src="img/bienvenida.jpg" alt="Bienvenida" id="imgBienvenida" style="max-width:400px; width:80%; margin-bottom:20px; cursor:pointer;">
+
+                <h2>👋 Bienvenido a Hablemos Juntos</h2>
+                <p>Selecciona una categoría para comenzar a comunicarte</p>
+
+                <audio id="audioBienvenida" src="audio/bienvenida.mp3"></audio>
+
+            </div>
+
+
+            <!-- COMUNICACIÓN -->
+            <div id="comunicacion" class="tabcontent" data-category="comunicacion">
+                <h2 class="titulo-categoria">Comunicación y expresión</h2>
+
+                <button class="btn btn-secondary mb-3" onclick="volverInicio()">⬅ Volver</button>
+                <div class="container-fluid">
+                    <div class="row card-container"></div>
+                </div>
+            </div>
+
+            <!-- ESCOLAR -->
+            <div id="escolar" class="tabcontent" data-category="escolar">
+                <h2 class="titulo-categoria">Necesidades escolares</h2>
+
+                <button class="btn btn-secondary mb-3" onclick="volverInicio()">⬅ Volver</button>
+                <div class="container-fluid">
+                    <div class="row card-container"></div>
+                </div>
+            </div>
+
+            <!-- PERSONALES -->
+            <div id="personales" class="tabcontent" data-category="personales">
+                <h2 class="titulo-categoria">Necesidades personales</h2>
+
+                <button class="btn btn-secondary mb-3" onclick="volverInicio()">⬅ Volver</button>
+                <div class="container-fluid">
+                    <div class="row card-container"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- MENÚ LATERAL DERECHO -->
+        <aside class="sidebar" id="menuLateral">
+            <ul class="side-menu">
+                <li><button class="tablinks" onclick="menu(event, 'comunicacion')">🗨 Comunicación y expresion</button></li>
+                <li><button class="tablinks" onclick="menu(event, 'escolar')">🎒 Escolares</button></li>
+                <li><button class="tablinks" onclick="menu(event, 'personales')">👤 Personales</button></li>
+            </ul>
+        </aside>
+
+    </div>
+
+
+
+</body>
+
+</html>

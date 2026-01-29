@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
+/*Estilos de las tarjetas*/
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.audio-button {
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 100%;
+}
+
+.audio-button:hover {
+    transform: scale(1.1);
+}
+
+.centrar {
+    width: 80%;
+}
+
+
+/*Estilos de la página*/
+
+body {
+    background-image: url('img/11.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1,
+body {
+    font-family: 'Baloo 2', cursive;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+}
+
+.titulo {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*Estilos del menú*/
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button.active {
+    border-bottom: 4px solid #41b6b6;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+.tab {
+    overflow: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+.app {
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/* ===== LAYOUT GENERAL ===== */
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 120px);
+}
+
+
+/* ===== MENÚ LATERAL IZQUIERDO ===== */
+
+.sidebar {
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-right: 3px solid #41b6b6;
+    backdrop-filter: blur(6px);
+}
+
+
+/* ===== LISTA DEL MENÚ ===== */
+
+.side-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    margin-bottom: 15px;
+}
+
+
+/* ===== BOTONES DEL MENÚ ===== */
+
+.side-menu button {
+    width: 100%;
+    padding: 22px;
+    /* MÁS GRANDE */
+    font-size: 1.4rem;
+    /* TEXTO MÁS GRANDE */
+    border: none;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.55);
+    /* TRANSPARENCIA */
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    /* efecto suave */
+    transition: all 0.3s ease;
+}
+
+.side-menu button:hover {
+    background-color: rgba(180, 220, 255, 0.8);
+    transform: scale(1.05);
+}
+
+
+/* ===== CONTENIDO ===== */
+
+.contenido {
+    flex: 1;
+    padding: 30px;
+}
+
+.titulo-categoria {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+
+/* ===== FUENTE PARA TARJETAS ===== */
+
+.card {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+}
+
+
+/* Centrar la última tarjeta cuando es impar */
+
+.card-container>.tarjeta:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* TEXTO DE LAS TARJETAS */
+
+.texto-tarjeta {
+    font-size: 1.6rem;
+    /* más grande */
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+
+.audio-button:active {
+    transform: scale(0.95);
+    filter: brightness(1.1);
+}
+
+.tabcontent {
+    animation: aparecer 0.4s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.btn-repetir {
+    margin-top: 12px;
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 14px;
+    background-color: #41b6b6;
+    color: white;
+    cursor: pointer;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+}
+
+.btn-repetir:hover {
+    background-color: #2fa1a1;
+    transform: scale(1.05);
+}
+
+.btn-repetir:active {
+    transform: scale(0.95);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+}
+
+#inicio h2 {
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#inicio p {
+    font-size: 1.8rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 12px;
+}
