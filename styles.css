@@ -89,56 +89,45 @@ h2 {
     min-height: calc(100vh - 120px);
 }
 
-
-/* ===== MENÚ LATERAL IZQUIERDO ===== */
-
-.sidebar {
-    width: 260px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border-right: 3px solid #41b6b6;
-    backdrop-filter: blur(6px);
+.menu-superior {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 20px 40px 10px;
 }
 
-
-/* ===== LISTA DEL MENÚ ===== */
-
-.side-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.side-menu li {
-    margin-bottom: 15px;
-}
-
-
-/* ===== BOTONES DEL MENÚ ===== */
-
-.side-menu button {
-    width: 100%;
-    padding: 22px;
-    /* MÁS GRANDE */
-    font-size: 1.4rem;
-    /* TEXTO MÁS GRANDE */
+.menu-tab {
+    background: none;
     border: none;
-    border-radius: 18px;
-    background-color: rgba(255, 255, 255, 0.55);
-    /* TRANSPARENCIA */
     cursor: pointer;
-    text-align: left;
     font-family: 'Baloo 2', cursive;
     font-weight: 600;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
-    /* efecto suave */
-    transition: all 0.3s ease;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    font-size: 1.1rem;
 }
 
-.side-menu button:hover {
-    background-color: rgba(180, 220, 255, 0.8);
-    transform: scale(1.05);
+.menu-tab .icono {
+    font-size: 1.4rem;
+}
+
+.menu-tab:hover {
+    color: #41b6b6;
+}
+
+.menu-tab.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #41b6b6;
+    border-radius: 2px;
 }
 
 
@@ -249,4 +238,39 @@ h2 {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     border-radius: 12px;
+}
+
+
+/* ===== AJUSTE MENÚ SUPERIOR JUNTO AL TÍTULO ===== */
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo .nav-item {
+    list-style: none;
+}
+
+.menu-superior {
+    padding: 0;
+    /* quitamos el padding que lo bajaba */
+    gap: 25px;
+    /* espacio entre botones */
+}
+
+.menu-tab {
+    font-size: 1.1rem;
+    padding-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menu-superior {
+        justify-content: center;
+    }
 }

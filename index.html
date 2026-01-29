@@ -23,6 +23,26 @@
         <li class="nav-item">
             <h1 class="mx-3 app">Hablemos Juntos</h1>
         </li>
+
+        <!-- MENÚ CON ICONOS -->
+        <li class="nav-item">
+            <nav class="menu-superior">
+                <button class="menu-tab active" onclick="menu(event, 'comunicacion')">
+                <span class="icono">💬</span>
+                <span class="texto">Comunicación y expresion</span>
+            </button>
+
+                <button class="menu-tab" onclick="menu(event, 'escolar')">
+                <span class="icono">🎒</span>
+                <span class="texto">Escolares</span>
+            </button>
+
+                <button class="menu-tab" onclick="menu(event, 'personales')">
+                <span class="icono">👤</span>
+                <span class="texto">Personales</span>
+            </button>
+            </nav>
+        </li>
     </ul>
 
     <div class="layout">
@@ -76,19 +96,14 @@
 
         </main>
 
-        <!-- MENÚ LATERAL DERECHO -->
-        <aside class="sidebar" id="menuLateral">
-            <ul class="side-menu">
-                <li><button class="tablinks" onclick="menu(event, 'comunicacion')">🗨 Comunicación y expresion</button></li>
-                <li><button class="tablinks" onclick="menu(event, 'escolar')">🎒 Escolares</button></li>
-                <li><button class="tablinks" onclick="menu(event, 'personales')">👤 Personales</button></li>
-            </ul>
-        </aside>
-
     </div>
 
-
-
 </body>
+
+
+<!-- AUDIOS DE CATEGORÍAS -->
+<audio id="audioComunicacion" src="audio/comunicacion.mp3"></audio>
+<audio id="audioEscolar" src="audio/escolares.mp3"></audio>
+<audio id="audioPersonales" src="audio/personales.mp3"></audio>
 
 </html>
