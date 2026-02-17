@@ -25,7 +25,7 @@
 /*Estilos de la página*/
 
 body {
-    background-image: url('img/11.jpg');
+    background-image: url('img/13.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -101,14 +101,18 @@ h2 {
     border: none;
     cursor: pointer;
     font-family: 'Baloo 2', cursive;
-    font-weight: 600;
-    color: #333;
+    font-weight: 800;
+    /* más gruesa */
+    color: #1a1a1a;
+    /* más oscuro */
     display: flex;
     align-items: center;
     gap: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 8px 12px;
     position: relative;
-    font-size: 1.1rem;
+    font-size: 3.3rem;
+    /* MÁS GRANDE */
+    transition: all 0.3s ease;
 }
 
 .menu-tab .icono {
@@ -116,7 +120,10 @@ h2 {
 }
 
 .menu-tab:hover {
-    color: #41b6b6;
+    background-color: #41b6b6;
+    color: white;
+    border-radius: 10px;
+    padding: 6px 10px;
 }
 
 .menu-tab.active::after {
